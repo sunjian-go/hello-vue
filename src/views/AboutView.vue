@@ -57,7 +57,7 @@
         if (this.user.username==''||this.user.email==''||this.user.sex==''||this.user.city==''){
           alert("不能为空")
         }else {
-        this.$http.post("/test1",this.user).then(res=>{
+        this.$http.post("/test",this.user).then(res=>{
           //alert("提交成功")
           console.log("状态为："+res)
         }).catch(err=>{
@@ -68,7 +68,7 @@
       },
       getdata(){
         //GET请求获取后端数据
-        this.$http.get("/test1").then(response=> {
+        this.$http.get("/test").then(response=> {
           console.log(response.data.data)
           this.prople = response.data.data
         }).catch(error=>{
